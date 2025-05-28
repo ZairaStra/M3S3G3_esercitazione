@@ -40,7 +40,7 @@ const MainSearch = () => {
         </Col>
         <Col xs={10} className="mx-auto">
           <Form onSubmit={handleSubmit}>
-            <Form.Control type="search" value={query} onChange={handleChange} placeholder="Inserisci la chiave di ricerca e premi Enter" />
+            <Form.Control type="search" value={query} onChange={handleChange} placeholder="Search by work" />
           </Form>
         </Col>
         <Col xs={10} className="mx-auto mb-5">
