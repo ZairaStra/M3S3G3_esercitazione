@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Col, ListGroup, Button } from "react-bootstrap";
+import { FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Favourites = () => {
@@ -26,7 +27,7 @@ const Favourites = () => {
                   <strong>{job.company_name}</strong>
                 </Link>
                 <Button variant="outline-danger" size="sm" onClick={() => removeFromFavourites(job.company_name)}>
-                  Remove
+                  <FaTrash />
                 </Button>
               </ListGroup.Item>
             ))}
