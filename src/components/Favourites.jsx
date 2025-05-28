@@ -16,7 +16,7 @@ const Favourites = () => {
           <ListGroup>
             {favourites.map((job, index) => (
               <ListGroup.Item key={index}>
-                <strong>{job.company_name}</strong> — {job.title}
+                <strong>{job.company_name}</strong>
               </ListGroup.Item>
             ))}
           </ListGroup>
