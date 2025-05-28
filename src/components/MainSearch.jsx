@@ -35,10 +35,7 @@ const MainSearch = () => {
       <Row className="my-5">
         <Col xs={10} className="mx-auto my-3">
           <div className="d-flex justify-content-between">
-            <h1 className="display-1">Remote Jobs Search</h1>{" "}
-            <Link to="/favorites" className="btn btn-outline-primary">
-              Your Favorites Companies
-            </Link>
+            <h1 className="display-1">Remote Jobs Search</h1> <Link to="/favourites">Your Favourites Companies</Link>
           </div>
         </Col>
         <Col xs={10} className="mx-auto">

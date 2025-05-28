@@ -5,15 +5,15 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 const Job = ({ data }) => {
   const dispatch = useDispatch();
-  const favorites = useSelector((state) => state.favorites.content);
+  const favourites = useSelector((state) => state.favourites.content);
 
-  const isFavorited = favorites.some((job) => job.company_name === data.company_name);
+  const isFavourited = favourites.some((job) => job.company_name === data.company_name);
 
-  const toggleFavorite = () => {
-    if (isFavorited) {
-      dispatch({ type: "REMOVE_FROM_FAVORITES", payload: data });
+  const toggleFavourite = () => {
+    if (isFavourited) {
+      dispatch({ type: "REMOVE_FROM_FAVOURITES", payload: data });
     } else {
-      dispatch({ type: "ADD_TO_FAVORITES", payload: data });
+      dispatch({ type: "ADD_TO_FAVOURITES", payload: data });
     }
   };
 
@@ -28,8 +28,8 @@ const Job = ({ data }) => {
         </a>
       </Col>
       <Col xs={3}>
-        <Button variant="light" onClick={toggleFavorite}>
-          {isFavorited ? <FaHeart color="red" /> : <FaRegHeart />}
+        <Button variant="light" onClick={toggleFavourite}>
+          {isFavourited ? <FaHeart color="red" /> : <FaRegHeart />}
         </Button>
       </Col>
     </Row>
