@@ -11,9 +11,9 @@ const Job = ({ data }) => {
 
   const toggleFavourite = () => {
     if (isFavourited) {
-      dispatch({ type: "REMOVE_FROM_FAVOURITES", payload: data });
+      dispatch({ type: "REMOVE_FROM_FAVOURITES", payload: { company_name: data.company_name } });
     } else {
-      dispatch({ type: "ADD_TO_FAVOURITES", payload: data });
+      dispatch({ type: "ADD_TO_FAVOURITES", payload: { company_name: data.company_name } });
     }
   };
 
@@ -22,11 +22,13 @@ const Job = ({ data }) => {
       <Col xs={3}>
         <Link to={`/${data.company_name}`}>{data.company_name}</Link>
       </Col>
-      <Col xs={6}>
-        <a href={data.url} target="_blank" rel="noreferrer">
-          {data.title}
-        </a>
-      </Col>
+      {data.title && (
+        <Col xs={6}>
+          <a href={data.url} target="_blank" rel="noreferrer">
+            {data.title}
+          </a>
+        </Col>
+      )}
       <Col xs={3}>
         <Button variant="light" onClick={toggleFavourite}>
           {isFavourited ? <FaHeart color="red" /> : <FaRegHeart />}

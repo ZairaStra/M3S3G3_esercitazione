@@ -32,11 +32,9 @@ const MainSearch = () => {
 
   return (
     <Container>
-      <Row className="my-5">
+      <Row>
         <Col xs={10} className="mx-auto my-3">
-          <div className="d-flex justify-content-between">
-            <h1 className="display-1">Remote Jobs Search</h1> <Link to="/favourites">Your Favourites Companies</Link>
-          </div>
+          <h1 className="display-1">Remote Jobs Search</h1>
         </Col>
         <Col xs={10} className="mx-auto">
           <Form onSubmit={handleSubmit}>
